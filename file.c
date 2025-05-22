@@ -57,3 +57,28 @@ void search_student() {
     }
     printf("Student with ID %d not found.\n", id);
 }
+
+int main() {
+    int choice;
+
+    do {
+        printf("\n--- Student Management Menu ---\n");
+        printf("1. Add Student\n");
+        printf("2. Display Students\n");
+        printf("3. Search Student\n");
+        printf("4. Exit\n");
+        printf("Enter choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1: add_student(); break;
+            case 2: display_students(); break;
+            case 3: search_student(); break;
+            case 4: printf("Exiting program...\n"); break;
+            default: printf("Invalid choice. Try again.\n");
+        }
+
+    } while (choice != 4);
+
+    return 0;
+}
